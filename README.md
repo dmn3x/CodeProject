@@ -54,45 +54,7 @@ The algorithm uses real distance data (in kilometers) between 8 locations:
 
 ## 📈 Algorithm Flowchart
 
-<!-- Space reserved for flowchart -->
-```
-[Flowchart will be added here]
-
-Start
-  ↓
-Initialize route [0,1,2,3,4,5,6,7]
-  ↓
-Shuffle middle cities (keep 0 first, 7 last)
-  ↓
-Set initial temperature = 1000
-  ↓
-┌─────────────────────────────────────┐
-│ Main Optimization Loop              │
-│                                     │
-│ Generate neighbor (swap 2 cities)   │
-│         ↓                           │
-│ Calculate neighbor distance         │
-│         ↓                           │
-│ Better solution?                    │
-│    ↓ Yes        ↓ No                │
-│ Accept      Accept with             │
-│             probability e^(-Δ/T)    │
-│         ↓                           │
-│ Update current solution             │
-│         ↓                           │
-│ Update best solution if improved    │
-│         ↓                           │
-│ Cool temperature (T = T × 0.95)     │
-│         ↓                           │
-│ T > min_temp && iter < max_iter?    │
-│    ↓ Yes        ↓ No                │
-│ Continue    Exit loop               │
-└─────────────────────────────────────┘
-  ↓
-Display results and statistics
-  ↓
-End
-```
+![Gambar Flowchart](flowchart-sa.jpeg)
 
 ## 🏃‍♂️ Usage
 
